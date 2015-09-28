@@ -24,20 +24,33 @@
   <body>
 
     <ion-pane>
-        <ion-header-bar align-title="center" class="bar-positive">
-          <div class="buttons">
-            <button class="button" ng-click="doSomething()">Left Button</button>
-          </div>
+        <ion-header-bar align-title="center" class="bar-dark">
           <h1 class="title">Controle de Pragas</h1>
-          <div class="buttons">
-            <button class="button">Right Button</button>
-          </div>
         </ion-header-bar>
-
-
         <ion-content>
-      </ion-content>
 
+        <div class="list">
+
+            <label class="item item-input">
+            <span class="input-label">Usúario</span>
+                <i class="icon ion-person placeholder-icon"></i>
+                <input type="text" placeholder="Informe o seu usuário">
+            </label>
+            <label class="item item-input">
+            <span class="input-label">Senha</span>
+                <i class="icon ion-lock-combination placeholder-icon"></i>
+                <input type="password" placeholder="Informe sua senha">
+            </label>
+            <button class="button button-block button-dark">
+                Entrar
+            </button>
+        </div>
+
+      </ion-content>
     </ion-pane>
+    <ion-footer-bar align-title="center" class="bar-dark">
+        <h1 class="title">Aqui pode ir alguma mensagem</h1>
+    </ion-footer-bar>
+
   </body>
 </html>
