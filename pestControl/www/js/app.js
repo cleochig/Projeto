@@ -39,18 +39,37 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     abstract: true,
     templateUrl: 'includes/menu.html',
     controller: 'AppCtrl'
-  })
+    })
 
-  .state('app.cadprg', {
+   .state('app.cadprg', {
     url: '/cadprg',
     views: {
       'menuContent': {
         templateUrl: 'includes/cadprg.html'
       }
     }
-  })
+    })
 
-  .state('app.cadtal', {
+    .state('app.ctrprg', {
+    url: '/ctrprg',
+    views: {
+      'menuContent': {
+        templateUrl: 'includes/ctrprg.html'
+      }
+    }
+    })
+
+
+    .state('app.plnctr', {
+    url: '/plnctr',
+    views: {
+      'menuContent': {
+        templateUrl: 'includes/plnctr.html'
+      }
+    }
+    })
+
+    .state('app.cadtal', {
       url: '/cadtal',
       views: {
         'menuContent': {
@@ -68,15 +87,17 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
-  .state('app.single', {
-    url: '/includes/:playlistId',
-    views: {
+    .state('app.single', {
+     url: '/includes/:playlistId',
+     views: {
       'menuContent': {
         templateUrl: 'includes/playlist.html',
         controller: 'PlaylistCtrl'
       }
     }
-  });
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/login');
+    });
+
+    // if none of the above states are matched, use this as the fallback
+    $urlRouterProvider.otherwise('/app/login');
+
 });
