@@ -29,7 +29,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/login',
       views: {
         'menuContent': {
-          templateUrl: 'templates/login.html'
+          templateUrl: 'includes/login.html'
         }
       }
     })
@@ -37,24 +37,24 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     .state('app', {
     url: '/app',
     abstract: true,
-    templateUrl: 'templates/menu.html',
+    templateUrl: 'includes/menu.html',
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.cadprg', {
+    url: '/cadprg',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'includes/cadprg.html'
       }
     }
   })
 
-  .state('app.browse', {
-      url: '/browse',
+  .state('app.cadtal', {
+      url: '/cadtal',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'includes/cadtal.html'
         }
       }
     })
@@ -62,17 +62,17 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/playlists',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlists.html',
+          templateUrl: 'includes/playlists.html',
           controller: 'PlaylistsCtrl'
         }
       }
     })
 
   .state('app.single', {
-    url: '/playlists/:playlistId',
+    url: '/includes/:playlistId',
     views: {
       'menuContent': {
-        templateUrl: 'templates/playlist.html',
+        templateUrl: 'includes/playlist.html',
         controller: 'PlaylistCtrl'
       }
     }
